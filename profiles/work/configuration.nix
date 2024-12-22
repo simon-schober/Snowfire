@@ -13,6 +13,7 @@
       ../../system/hardware/opengl.nix
       ../../system/hardware/printing.nix
       ../../system/hardware/bluetooth.nix
+      ../../system/hardware/nvidia.nix
       (./. + "../../../system/wm"+("/"+userSettings.wm)+".nix") # My window manager
       #../../system/app/flatpak.nix
       ../../system/app/virtualization.nix

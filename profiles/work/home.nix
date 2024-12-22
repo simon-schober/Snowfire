@@ -47,6 +47,7 @@
     git
     syncthing
     obsidian
+    anytype
     todoist
     notion-app-enhanced
 
