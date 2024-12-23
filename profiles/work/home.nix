@@ -47,9 +47,6 @@
     git
     syncthing
     obsidian
-    anytype
-    todoist
-    notion-app-enhanced
 
     # Office
     # nextcloud-client

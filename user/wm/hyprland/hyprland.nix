@@ -66,6 +66,7 @@ in
       exec-once = keepassxc
       exec-once = keepass-workspace
       exec-once = todoist-bridge
+      exec-once = thunderbird
 
       bezier = wind, 0.05, 0.9, 0.1, 1.05
       bezier = winIn, 0.1, 1.1, 0.1, 1.0
@@ -222,6 +223,8 @@ in
        bind=SUPER,B,togglespecialworkspace,scratch_btm
        bind=SUPER,P,exec,if hyprctl clients | grep scratch_keepass; then echo "scratch_ranger respawn not needed"; else keepassxc; fi
        bind=SUPER,P,togglespecialworkspace,scratch_keepass
+       bind=SUPER,E,exec,if hyprctl clients | grep scratch_thunderbird; then echo "scratch_ranger respawn not needed"; else thunderbird; fi
+       bind=SUPER,E,togglespecialworkspace,scratch_thunderbird
        # bind=SUPER,P,exec,togglespecialworkspace,scratch_pavucontrol
        # bind=SUPER,P,exec,hyprctl dispatch togglespecialworkspace scratch_pavucontrol; if hyprctl clients | grep pavucontrol; then echo 'scratch_ranger respawn not needed'; else pavucontrol; fi
 
@@ -254,6 +257,12 @@ in
        windowrulev2 = $scratchpadsize,$scratch_btm
        windowrulev2 = workspace special:scratch_btm silent,$scratch_btm
        windowrulev2 = center,$scratch_btm
+
+       $scratch_thunderbird = class:^(thunderbird)$
+       windowrulev2 = float,$scratch_thunderbird
+       windowrulev2 = $scratchpadsize,$scratch_thunderbird
+       windowrulev2 = workspace special:scratch_thunderbird silent,$scratch_thunderbird
+       windowrulev2 = center,$scratch_thunderbird
 
        $scratch_keepass = class:^(org.keepassxc.KeePassXC)$
        windowrulev2 = float,$scratch_keepass
